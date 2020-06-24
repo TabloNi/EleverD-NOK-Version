@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2020. TabloNi reserves the right to control this code, and any unauthorized modification or theft of this code may be subject to legal penalties.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="40dp"
+    android:layout_marginRight="40dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/main_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="64dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/color_eleverd_logo"
+        app:layout_constraintBottom_toTopOf="@id/text_main"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_main"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/hi_eleverd"
+        android:textColor="#232323"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@id/text_sub"
+        app:layout_constraintTop_toBottomOf="@+id/main_logo" />
+
+    <TextView
+        android:id="@+id/text_sub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="회원 서비스 이용을 위해 로그인 해주세요."
+        android:textColor="#a5a5a5"
+        app:layout_constraintBottom_toTopOf="@id/button_login"
+        app:layout_constraintTop_toBottomOf="@id/text_main" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/button_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/view_or"
+        app:layout_constraintTop_toBottomOf="@id/text_sub">
+
+        <ImageView
+            android:id="@+id/image_facebook"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/bg_round_white"
+            android:elevation="3dp"
+            android:padding="20dp"
+            android:src="@drawable/ic_facebook"
+            app:layout_constraintBottom_toTopOf="@id/text_facebook"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/image_kakao"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/image_kakao"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/bg_round_white"
+            android:elevation="3dp"
+            android:padding="20dp"
+            android:src="@drawable/ic_kakao"
+            app:layout_constraintBottom_toTopOf="@id/text_kakao"
+            app:layout_constraintLeft_toRightOf="@id/image_facebook"
+            app:layout_constraintRight_toLeftOf="@id/image_google"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/image_google"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/bg_round_white"
+            android:elevation="3dp"
+            android:padding="20dp"
+            android:src="@drawable/ic_google"
+            app:layout_constraintBottom_toTopOf="@id/text_google"
+            app:layout_constraintLeft_toRightOf="@id/image_kakao"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_facebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="페이스북으로\n시작하기"
+            android:textColor="#232323"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/image_facebook"
+            app:layout_constraintRight_toRightOf="@id/image_facebook"
+            app:layout_constraintTop_toBottomOf="@id/image_facebook" />
+
+        <TextView
+            android:id="@+id/text_kakao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="카카오로\n시작하기"
+            android:textColor="#232323"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/image_kakao"
+            app:layout_constraintRight_toRightOf="@id/image_kakao"
+            app:layout_constraintTop_toBottomOf="@id/image_kakao" />
+
+        <TextView
+            android:id="@+id/text_google"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="구글로\n시작하기"
+            android:textColor="#232323"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/image_google"
+            app:layout_constraintRight_toRightOf="@id/image_google"
+            app:layout_constraintTop_toBottomOf="@id/image_google" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/view_or"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/layout_form"
+        app:layout_constraintTop_toBottomOf="@id/button_login">
+
+        <View
+            android:id="@+id/view_left_line"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginRight="6dp"
+            android:background="#5a5a5a"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/text_or"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_or"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="or"
+            android:textColor="#5a5a5a"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/view_left_line"
+            app:layout_constraintRight_toLeftOf="@id/view_right_line"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view_right_line"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="6dp"
+            android:background="#5a5a5a"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/text_or"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_form"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/checkbox_login"
+        app:layout_constraintTop_toBottomOf="@id/view_or">
+
+        <EditText
+            android:id="@+id/edit_login"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_gradation_login"
+            android:hint="      아이디를 입력해 주세요." />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+        <EditText
+            android:id="@+id/edit_password"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_gray_login"
+            android:hint="     비밀번호를 입력해 주세요." />
+
+
+    </LinearLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/checkbox_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/button_login_main"
+        app:layout_constraintTop_toBottomOf="@id/layout_form">
+
+        <CheckBox
+            android:id="@+id/checkbox_save_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="아이디 저장"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/checkbox_auto_login"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckBox
+            android:id="@+id/checkbox_auto_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="자동 로그인"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/checkbox_save_id"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/button_login_main"
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:text="로그인"
+        android:background="@drawable/bg_round_gradation"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@id/layout_signup"
+        app:layout_constraintTop_toBottomOf="@id/checkbox_login" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_login_main">
+
+        <TextView
+            android:id="@+id/text_find_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="아이디 찾기 | "
+            android:textColor="#232323"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/text_find_password"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_find_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="비밀번호 찾기"
+            android:textColor="#232323"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/text_find_id"
+            app:layout_constraintRight_toLeftOf="@id/text_sign_up"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" | 회원가입"
+            android:textColor="#232323"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/text_find_password"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
